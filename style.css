@@ -507,18 +507,9 @@ input:focus {
   }
  
   
-  /*
-  #results-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; 
-  }
-  
-  #results-table tbody tr:hover {
-    background-color: #e0e0e0; 
-  }
-  */
   /* Mobile styles */
   
-@media (max-width: 700px) {
+@media only screen and (max-width: 767px) {
     body {
         background-size: 1000px;
         background-position-x: 50%;
@@ -677,11 +668,4 @@ input:focus {
         display: flex;
         flex-direction: column;
     }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {    
-    .logo  {
-        width: 200px;
-    }
-
 }
