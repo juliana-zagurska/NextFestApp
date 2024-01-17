@@ -1,0 +1,682 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: url(assets/bg.jpg) center/cover no-repeat;;    
+    min-height: 100vh;
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+  
+  /* Wrapper for the entire content */
+  .wrapper {
+   /* display: grid;
+    grid-template-rows: auto 1fr auto;*/
+    min-height: 60vh;
+  }
+  .key__features{
+    margin-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .key-features{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    margin: 63px 0px 0px;
+    max-width: 1300px;
+  }
+   .how-to-use {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.block {
+    text-align: center;
+    margin: 10px;
+    color: #333;
+    max-width: 270px;
+  }
+  
+  .circle {
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 0 auto;
+  }
+  .block p h2 {
+    color: #333;
+}
+
+.feature-list, .step-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li, .step-list li {
+    margin-bottom: 10px;
+}
+
+  
+  /* Header styles */
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    color: #111;
+    padding: 32px 56px;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .logo img {
+    width: 320px;
+    max-width: 75%; /* Ensures the image doesn't exceed its container's width */
+    max-height: 100px; /* Adjust the max-height as needed */
+    height: auto; /* Allows the image to scale proportionally */
+    display: block; /* Removes any extra space around the image */
+    /* margin: 0 auto;  Centers the image horizontally */
+}
+  .header-nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; 
+    margin-left: auto; 
+}
+
+.header-nav a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    text-decoration: none;
+    padding: 16px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.header-nav a:hover {
+    background-color: #1B14D233;
+    /* Adjust the hover background color as needed */
+}
+.header-nav a:active {
+    background-color: #1B14D2; /* Pressed background color */
+    color: #fff;
+  }
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.main-block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 655px;
+    margin: 128px 0px 0px 0px;
+}
+.main__block_header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 0px 64px 0px;
+    /* padding: 20px; */
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+.main__block_header h1{
+    margin: 0px 0px 24px 0px;
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 133.333% */
+}
+.main__block_header p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin: 0px;
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+input:focus {
+    outline: none; /* Remove the default focus outline */
+    border: 2px solid #037bd2; /* Add a custom border when focused if needed */
+}
+.search__date {
+    display: flex;
+    flex-direction: column;
+}
+ .search__holiday {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   /* min-height: 60vh;*/
+}
+.search-holiday-block{
+    display: flex;
+    flex-direction: row;
+}
+.search-holiday-text{
+    width: 670px;
+    margin: 128px 0px 64px 0px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.search__date,.search__holiday h3{
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    margin: 0px 0px 4px 12px;
+}
+.search__date input{
+    width: 320px;
+    margin: 4px 8px 10px 8px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; 
+}
+.search__holiday select{
+    width: 320px;
+    margin: 4px 8px 10px 8px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; 
+}
+.search__holiday h1{
+    margin: 0px 0px 24px 0px;
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 133.333% */
+}
+.search__holiday p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin: 0px;
+}
+.search__holiday p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin: 0px;
+}
+.button-block{
+    display: flex;
+    width: 655px;
+    justify-content: flex-end;
+}
+.search-holiday-button button {
+    padding: 10px;
+    height: 48px;
+    margin: 0px;
+   /* background-color: #0bc2a4;*/
+    background-color: #FF8728;
+    color: #fff;
+    border: 0px solid #FF8728;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search-holiday-button button:hover {
+    background-color: #E56D0E;
+    color: #fff;
+    border:  0px solid #E56D0E;
+}
+/*
+.search-holiday {
+    
+}
+.search-date:last-child {
+    margin-right: 0;
+}
+*/
+
+.time__presets{
+    display: flex;
+
+}
+.time__presets button {
+    padding: 12px 16px;
+    width: 95px;
+    margin: 0px 14px 0px 0px;
+    height: 48px;
+    background-color: #fff;
+    color: #333;
+    border: 0px solid #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.time__presets button:hover {
+    background-color: #E4E5E3;
+    color: #333;
+    border:  0px solid #E4E5E3;
+}
+.time__presets button.active {
+    background-color: #E4E5E3;
+    color: #333;
+    border: 0px solid #E4E5E3;
+}
+.search__button{
+    display: flex;
+    width: 100%;
+}
+.search__button button {
+    padding: 10px;
+    width: 100%;
+    height: 48px;
+    margin: 0px;
+   /* background-color: #0bc2a4;*/
+    background-color: #FF8728;
+    color: #fff;
+    border: 0px solid #FF8728;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search__button button:hover {
+    background-color: #E56D0E;
+    color: #fff;
+    border:  0px solid #E56D0E;
+}
+.time-presets {
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.time__presets select {
+    height: 48px;
+    margin: 0px 14px 0px 0px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 0px solid #fff;
+    border-radius: 10px;
+    width: 152px;
+    font-weight: 700px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  #preset option {
+    background-color: #fff;
+    color: #333;
+    
+  }
+  
+  #preset:hover {
+    border-color: #fff;
+  }
+  #display_format option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  #display_format:hover {
+    border-color: #fff;
+  }  
+.footer {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    height: 50px; /* Set a fixed height or adjust as needed */
+    background-color: transparent; /* Choose your desired background color */
+    color: #fff;
+    position: fixed; /* Fix the footer to the bottom of the viewport */
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #456;
+    color: #fff;
+}
+#results-table, #holidaysTable{
+    opacity: 1;
+}
+#result{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    border-bottom: 2px solid #D9D9D9; 
+    opacity:0;
+}
+.results-title{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.results {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 32px;
+  }
+  .holidays-results {
+    width: 655px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 32px 0px;
+  }
+  .holiday-results-header{
+    display: flex;
+  }
+  #sortButton{
+    border: 0px;
+    background-color: transparent;
+  }
+ 
+  #results-table {
+    width: 670px;
+    border-collapse: separate;
+    margin: 0px;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  #results-table tbody {
+    text-align: start;
+  }
+  #results-table td {
+    padding: 4px;
+    border: 0px solid #ddd; /* Border color */
+  }
+  #results-table tr:first-child td {
+    color: #818181;
+  }
+  #results-table td:nth-child(2) {
+    width: 40%;
+  }
+  #results-table td:nth-child(3) {
+    width: 40%;
+    font-weight: 700;
+  }
+
+
+
+  #holidaysTable thead {
+    text-align: justify;
+  }
+  #holidaysTable tbody {
+    text-align: start;
+  }
+  #holidaysTable td {
+    padding: 4px;
+    border: 0px solid #ddd; /* Border color */
+  }
+  #holidaysTable th {
+    padding: 4px;
+    border: 0px solid #ddd; /* Border color */
+    color: #818181;
+  }
+  #holidaysTable td:nth-child(2) {
+    width: 50%;
+    font-weight: 700;
+  }
+ 
+  
+  /*
+  #results-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+  }
+  
+  #results-table tbody tr:hover {
+    background-color: #e0e0e0; 
+  }
+  */
+  /* Mobile styles */
+  
+@media (max-width: 700px) {
+    .logo  {
+        width: 200px;
+    }
+    .header {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: #333;
+        padding: 32px 12px;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .header-nav {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        margin-left: 0px;
+    }
+    .header-nav a {
+        color: #333;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-decoration: none;
+        padding: 28px 12px; 
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    .main-block {
+        margin: 20px 0px 0px 0px;
+    }
+    .main__block_header {
+        width: 346px;
+    }
+    .main__block_header h1 {
+        margin: 0px 0px 24px 0px;
+        color: #333;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    .main__block_header p {
+        min-width: 300px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        margin: 0px;
+    }
+    .search {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 16px;
+    }
+    .search__date, .search-holiday {
+        margin: 0px;
+    }
+    .search__date h3, .search__holiday h3{
+        color: #333;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+        margin: 0px;
+    }
+    .search__date input {
+        margin: 4px 0px;
+        width: 344px;
+    }
+    .search__holiday select {
+        width: 344px;
+        margin: 8px 0px 0px 0px;
+    }
+    .time-presets {
+        display: flex;
+        flex-direction: column;
+        width: 344px;
+        flex-wrap: wrap;
+    }
+    .time__presets{
+        display: flex;
+        flex-direction: row;
+        margin: 0px 0px 16px;
+    }
+    .time__presets button {
+        padding: 12px 16px;
+        width: 164px;
+    }
+    .time__presets select {
+        padding: 12px 16px;
+        width: 164px;
+    }
+    .search__button{
+        display: flex;
+        width: none;
+    }
+    .search__button button, .search-holiday-button button {
+        padding: 10px;
+        width: 340px;
+        height: 48px;
+        margin: 0px;
+       /* background-color: #0bc2a4;*/
+        background-color: #FF8728;
+        color: #fff;
+        border: 0px solid #FF8728;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .button-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+    .results, .holidays-results {
+        width: 340px;
+    }
+    .key-features, .how-to-use {
+        display: flex;
+        flex-direction: column;
+    }
+    #results-table {
+        width: 100%;
+    }
+
+    #results-table td:nth-child(2) {
+        width: 39%;
+    }
+    #results-table td:nth-child(3) {
+        width: 30%;
+        font-weight: 700;
+    }
+    .search-holiday-text {
+        width: 346px;
+        margin: 0px 0px 64px 0px;
+    }
+    .search-holiday-text h1 {
+        margin: 0px 0px 24px 0px;
+        color: #333;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+    }
+    .search-holiday-block {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {    
+    .logo  {
+        width: 200px;
+    }
+
+}

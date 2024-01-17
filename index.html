@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Fest</title>
+    <link rel="icon" href="assets/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"> <img src="assets/logo_next_fest_hr.png" alt="Next Fest logo"></div>
+            <nav class="header-nav">
+                <a href="#home" onclick="showHomeContent()">TimeTracker Pro</a>
+                <a href="#check-fest" onclick="showNextFestContent()">NextFest</a>
+            </nav>
+        </div>
+        <section class="main" id="main">
+            <div class="main-block">
+                <div class="main__block_header">
+                    <h1>TimeTracker Pro</h1>
+                    <p>Ever wondered how much time has passed or will pass between two significant dates? Look no further! TimeTracker Pro is your go-to app for effortlessly calculating the precise duration between any two dates.</p>
+                    
+                </div>
+                <div class="search">
+                    <div class="search__date">
+                        <h3>From:</h3>
+                        <input class="search-date" placeholder="DD.MM.YYYY" id="firstDate" type="date" onchange="enableEndDate()" >
+                    </div>
+                    <div class="search__date">
+                        <h3>To:</h3>
+                        <input type="date" class="search-date" placeholder="DD.MM.YYYY" id="secondDate"disabled >
+                    </div>
+                </div>
+                <div class="time-presets">
+                    <div class="time__presets">
+                        <button onclick="applyPreset('week')" disabled>1 Week</button>
+                        <button onclick="applyPreset('month')" disabled>1 Month</button>
+                    </div>
+                    <div class="time__presets">
+                    <select class="time__presets" id="preset" disabled>
+                        
+                        <option value="all">All days</option>
+                        <option value="weekdays">Weekdays</option>
+                        <option value="weekends">Weekends</option>
+                    </select>
+                    <select class="time__presets" id="display_format" disabled>
+                        
+                        <option value="days">Days</option>
+                        <option value="hours">Hours</option>
+                        <option value="minutes">Minutes</option>
+                        <option value="seconds">Seconds</option>
+                    </select>
+                </div>
+                    <div class="search__button">
+                        <button onclick="getData()">Calculate</button>
+                    </div>
+                </div>
+                <div class="results">
+                    <div id="result"></div>
+                    <div class="results-title">Previous results:</div>
+                    <table id="results-table" style="margin-top: 20px;">
+                        <thead>
+                            <tr>
+                                <th>Starting Date</th>
+                                <th>End Date</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body"></tbody>
+                    </table>
+                </div>
+                </div>
+                <div class="key__features">
+                    <h2>Key Features:</h2>
+                    <div class="key-features">
+                        <div class="block">
+                            <div class="circle">📆</div>
+                            <h2>Flexible Date Selection:</h2>
+                            <p>Choose your starting and ending dates with ease using our intuitive date pickers.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">⏱️</div>
+                            <h2>Accurate Time Calculations:</h2>
+                            <p>Get precise time differences down to the second. Discover how many days, hours, minutes, and seconds separate your chosen dates.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">🗓️</div>
+                            <h2>Custom Presets:</h2>
+                            <p>Tailor your time tracking experience with presets like "1 Week" or "1 Month." It's quick, easy, and customizable to suit your needs.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">📈</div>
+                            <h2>Visualise Your Time:</h2>
+                            <p>See your time difference in a clear and visually appealing format. Understand the duration at a glance with a breakdown of days, hours, minutes, and seconds.</p>
+                          </div>
+                    </div>
+                    <h2>How to Use:</h2>
+
+                    <div class="how-to-use">
+                        
+                        <div class="block">
+                            <div class="circle">1</div>
+                            <h2>Select Dates:</h2>
+                            <p>Pick your start and end dates using the user-friendly date pickers.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">2</div>
+                            <h2>Choose Presets:</h2>
+                            <p>Optimize your tracking by selecting convenient presets like "1 Week" or "1 Month."</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">3</div>
+                            <h2>Get Results:</h2>
+                            <p>Instantly see the time difference between your chosen dates, presented in a comprehensive and easy-to-understand format.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">4</div>
+                            <h2>Explore Options:</h2>
+                            <p>Toggle between various display formats such as days, hours, minutes, and seconds to tailor the results to your preferences.</p>
+                          </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section to dynamically load Next Fest content -->
+            <section id="nextFestContent" style="display: none;">
+                    
+                <div class="search__holiday">
+                    <div class="search-holiday-text">
+                        <h1>NextFest</h1>
+                        <p>Welcome to the NextFest App! 🎉🌍 <br>Discover and explore holidays and festivals from around the world effortlessly. <br> Our user-friendly interface allows you to check festive occasions based on your selected country and year.</p>
+                    </div>
+                    <div class="search-holiday-block">
+                        <div class="search-holiday">
+                            <h3>Select country:</h3>
+                            <select class="search-holiday-elem" id="country" name="country" >
+                                <option value="USA">USA</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Ukraine">Ukraine</option>
+                            </select>
+                        </div>
+                        <div class="search-holiday">
+                            <h3>Select year:</h3>
+                            <select class="search-holiday-elem" id="year" name="year" disabled>
+                                <option value="2024" selected>2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button-block">
+                        <div class="search-holiday-button">
+                            <button id="calculateButton" disabled>Find Holidays</button>
+                        </div>
+                    </div>
+                    <div class="holidays-results">
+                        <div class="holiday-results-header">
+                            <div class="results-title">Results</div>
+                            <button id="sortButton"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                                <path d="M3.75 9V2.875L1.5625 5.0625L0.5 4L4.5 0L8.5 4L7.4375 5.0625L5.25 2.875V9H3.75ZM9.5 16L5.5 12L6.5625 10.9375L8.75 13.125V7H10.25V13.125L12.4375 10.9375L13.5 12L9.5 16Z" fill="#1B14D2"/>
+                            </svg></button>
+                        </div>
+                        <table id="holidaysTable" style="margin-top: 20px;">
+                            <thead>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>Holiday Name</td>
+                                </tr>
+                            </thead>
+                            <tbody id="holidays-results-body"></tbody>
+                        </table>
+                    </div>
+    
+                </div>
+                <div class="key__features">
+                    <h2>How to use:</h2>
+                    <div class="key-features">
+                        <div class="block">
+                            <div class="circle">🌐</div>
+                            <h2>Select Country and Year:</h2>
+                            <p>Choose your desired country and year to get a personalized list of holidays and festivals.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">🔄</div>
+                            <h2>Dynamic Updates:</h2>
+                            <p> The app dynamically updates the available years based on your chosen country, ensuring accurate and up-to-date information.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">🚀</div>
+                            <h2>Effortless Navigation:</h2>
+                            <p>Easily switch between the main content and detailed festival information with a click.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">📅 </div>
+                            <h2>Real-Time Data:</h2>
+                            <p>Utilizing the Calendarific API, we provide real-time holiday data, ensuring you stay informed about upcoming celebrations.</p>
+                          </div>
+                          <div class="block">
+                            <div class="circle">🔍 </div>
+                            <h2>Sorting Options: </h2>
+                            <p>Explore sorting options to arrange holidays either in ascending or descending order, allowing you to plan your schedule more efficiently.</p>
+                          </div>
+                    </div>
+                    </div>
+            </section>
+            <div class="footer">
+                <div class="pagination" id="pagination-container">
+                    
+                </div>
+            </div>
+        </div>
+        
+</body>
+<script src="script.js"></script>
+<script src="scriptAPI.js"></script>
+
+</html>
